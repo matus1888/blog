@@ -1,12 +1,105 @@
-.header{
-  width: 200px;
-  background-color: blue;
+.wrapper {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 5fr 1fr;
+    grid-template-areas: "logo header header" "sidebar content ......." "footer  footer  footer";
+    background-color: #fff;
+    color: #444;
 }
-.body{
-  height: 12px ;
-  background-color: red;
+
+.header {
+    height: 150px;
+    background-color: white;
+    grid-area: header;
+    border-radius: 16px;
+    display: grid;
+    grid-gap: 8px;
+    grid-template-rows: 2fr 1fr;
+    grid-template-areas: "one" "two";
+    margin: 10px;
+
 }
-.footer{
-  width: 40px;
-  background-color: blue;
+
+.body {
+    height: 500px;
+    border-radius: 10px;
+    background-color: gray;
+    grid-area: content;
+    margin: 10px;
+}
+
+.footer {
+    height: 200px;
+    background-color: gray;
+    grid-area: footer;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.logo {
+    grid-area: logo;
+    width: 100px;
+    margin: auto;
+}
+
+.headerOne {
+    padding-top:20px ;
+    text-align: center;
+    font-size: 200% ;
+    background-color: #444444;
+    color: white;
+    border-radius: 5px;
+}
+
+.headerTwo {
+    background-color: #444444;
+    color: white;
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+}
+
+.headerThree {
+    background-color: #444444;
+    color: white;
+    border-radius: 5px;
+    height: 0px;
+    transition: all 0.5s;
+    z-index: 100;
+}
+
+.headerThreeActive {
+    background-color: #444444;
+    color: white;
+    border-radius: 5px;
+    transition: all 0.5s;
+    height: 100px;
+    z-index: 100;
+}
+
+
+.button {
+    border-radius: 10px;
+    font-size: 150%;
+
+}
+.etherPrice{
+    margin: 20px;
+    font-weight: bold;
+    font-size: 150%;
+
+}
+
+.button:hover {
+    border-radius: 10px;
+    background-color: gray;
+}
+
+.hide{
+     cursor: pointer;
+    margin-left: 20px;
+ }
+.hide:hover {
+    cursor: pointer;
 }
