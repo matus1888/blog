@@ -1,0 +1,12 @@
+.header{
+  width: 200px;
+  background-color: blue;
+}
+.body{
+  height: 12px ;
+  background-color: red;
+}
+.footer{
+  width: 40px;
+  background-color: blue;
+}
