@@ -1,5 +1,5 @@
 import s from './App.module.css';
-import Recording from "./component/Recording";
+import Recording from "./component/Recordings/Recording";
 import React, {useEffect, useState} from "react";
 import AboutUs from "./component/AboutUs/AboutUs";
 import Projects from "./component/Projects";

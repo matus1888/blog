@@ -1,0 +1,28 @@
+.wrapper p {
+    text-indent: 1.5em;
+    margin-top: 0
+}
+
+.image {
+    text-align: center;
+}
+
+.text {
+    margin-left: 20px;
+    color: honeydew;
+    font-weight: revert;
+    font-size: 120%;
+}
+
+.ava {
+    max-width: 70px;
+    border-radius: 35px;
+}
+
+.b {
+    text-align: center;
+    color: honeydew;
+}
+.autorBlock{
+    text-align: center;
+}
