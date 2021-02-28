@@ -3,8 +3,9 @@ import Recording from "./component/Recordings/Recording";
 import React, {useEffect, useState} from "react";
 import AboutUs from "./component/AboutUs/AboutUs";
 import Projects from "./component/Projects";
-import img from './images/sailing-black-48dp.svg'
+import img from './images/ether.gif'
 import api from './API/axios'
+import Footer from "./component/Footer/Footer";
 
 const App = () => {
     const initialState = {
@@ -17,7 +18,6 @@ const App = () => {
     }
     const [state, setState] = useState(initialState);
     let json = () => {
-        console.log('this is json()')
         api.get('avgPrice?symbol=ETHUSDT').then(response => {
             setState({...state, price: response.data.price})
         })
@@ -35,11 +35,15 @@ const App = () => {
     )
     return (<div className={s.wrapper}>
         <div className={s.logo}>
-            {state.price !== 0 && <div className={s.etherPrice}>{Math.round(state.price)}</div>}
-            <img className={s.logo} src={img} alt="logo"/>
+            <img className={s.imageOfLogo} src={img} alt="logo"/>
         </div>
         <div className={s.header}>
-            <div className={s.headerOne}>ТЕМ ВРЕМЕНЕМ ЭФИР СТОИТ {Math.round(state.price)} $!!!!</div>
+            <div className={s.headerOne}>
+                ТЕМ ВРЕМЕНЕМ ЭФИР СТОИТ {Math.round(state.price)} $!!!!
+                <span className={s.span}>
+                    <a href="/">Войти</a>
+                </span>
+            </div>
             <div className={s.headerTwo}>
                 <button className={s.button}
                         onClick={() => setState({...state, active: true, one: true, two:false, three:false, four:false})}>Обо мне
@@ -69,7 +73,8 @@ const App = () => {
         </div>
         <div className={s.footer} onClick={() => {
             setState({...state, active: false, one: false, two: false, three: false, four: false})
-        }}>footer
+        }}>
+            <Footer/>
         </div>
     </div>)
 }

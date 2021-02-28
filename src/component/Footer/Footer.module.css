@@ -1,0 +1,17 @@
+.wrapper {
+    margin-top: 25px;
+    text-align:center;
+    font-size: 120% ;
+    color: white;
+
+}
+.iconVK{
+    width: 80px;
+}
+.iconTLG{
+    width: 135px;
+}
+.iconMail{
+    margin-left: 25px;
+    width: 80px;
+}

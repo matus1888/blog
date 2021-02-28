@@ -2,7 +2,7 @@
     display: grid;
     grid-gap: 10px;
     grid-template-columns: 1fr 5fr 1fr;
-    grid-template-areas: "logo header header" "sidebar content ......." "footer  footer  footer";
+    grid-template-areas: "logo header header" "content content content" "footer  footer  footer";
     background-color: #fff;
     color: #444;
 }
@@ -40,6 +40,13 @@
     grid-area: logo;
     width: 100px;
     margin: auto;
+}
+.span{
+    margin-left: 50px;
+}
+.imageOfLogo{
+    width: 250px;
+    margin-left: -70px;
 }
 
 .headerOne {
